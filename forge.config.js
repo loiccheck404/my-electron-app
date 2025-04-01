@@ -6,6 +6,19 @@ module.exports = {
     asar: true,
   },
   rebuildConfig: {},
+  publishers: [
+    {
+      name: "@electron-forge/publisher-github",
+      config: {
+        repository: {
+          owner: "loiccheck404",
+          name: "my-electron-app",
+        },
+        prerelease: false,
+        draft: true,
+      },
+    },
+  ],
   makers: [
     {
       name: "@electron-forge/maker-squirrel",
